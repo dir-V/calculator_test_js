@@ -25,7 +25,7 @@ describe('sum', () => {
   test('can add two negative numbers', () => {
     expected = -12;
     actual = sum(-6, -6);
-    expect(acutal).toBe(expected);
+    expect(actual).toBe(expected);
   });
 
   test('can add zero', () => {
@@ -37,7 +37,23 @@ describe('sum', () => {
 });
 
 describe('subtract', () => {
-  
+  test("can subtract 2 nums", () =>{
+    expected = 12
+    actual = subtract(24, 12);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract negative nums', () => {
+    expected = 3
+    actual = subtract(-3,-6);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract from zero', () =>{
+    expected = -3;
+    actual = subtract(0, 3);
+    expect(actual).toBe(expected);
+  })
 
 });
 

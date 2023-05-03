@@ -58,21 +58,95 @@ describe('subtract', () => {
 });
 
 describe('multiply', () => {
+  test('can multiply postive numbers', () =>{
+    expected = 25
+    actual = multiply(5, 5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply negative numbers', () =>{
+    expected = 25
+    actual = multiply(-5, -5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply one postive, and one negative number', () =>{
+    expected = -25
+    actual = multiply(-5, 5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply by zero', () =>{
+    expected = 0
+    actual = multiply(0, 5);
+    expect(actual).toBe(expected);
+  });
 
 });
 
 describe('divide', () => {
+  test('can divide postive numbers', () =>{
+    expected = 25
+    actual = divide(100,4);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide negative numbers', () =>{
+    expected = -4
+    actual = divide(-20,5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide by zero (no error)', () =>{
+    expected = 0
+    actual = divide(0,5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide by zero (math error)', () =>{
+    expected = Infinity
+    actual = divide(5,0);
+    expect(actual).toBe(expected);
+  });
 
 });
 
 describe('modulus', () => {
 
+  test('can get remainder', () =>{
+    expected = 1
+    actual = modulus(7,2);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('even', () => {
 
+  test('can get true (even)', () =>{
+    expected = true
+    actual = even(80);
+    expect(actual).toBe(expected);
+  });
+
+  test('can get false (even)', () =>{
+    expected = false
+    actual = even(81);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('odd', () => {
+  test('can get false (odd)', () =>{
+    expected = false
+    actual = odd(80);
+    expect(actual).toBe(expected);
+  });
 
+  test('can get true (odd)', () =>{
+    expected = true
+    actual = odd(81);
+    expect(actual).toBe(expected);
+  });
 });
